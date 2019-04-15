@@ -1,8 +1,7 @@
 from slackclient import SlackClient
-import os
-import environment
+import local_settings
 
-slack_token = environment.bot_auth
+slack_token = local_settings.bot_auth
 sc = SlackClient(slack_token)
 
 sc.api_call(
